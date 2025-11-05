@@ -1,0 +1,418 @@
+/* --- 1. TIPOGRAFIA E PALETA DE CORES --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --max-width: 1200px;
+    --paper-bg-outer: #e8dcb8; /* Cor de papel antigo (sépia) */
+    --paper-bg-inner: #fffaf0; /* Fundo interno mais claro */
+    --ink: #111; /* Preto para texto principal */
+    --muted: #444; /* Cinza escuro */
+    --accent-blue: #000080; /* Azul escuro/marinho para títulos e links */
+}
+
+/* --- 2. ESTILO BASE E BACKGROUND --- */
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: var(--paper-bg-outer);
+    color: var(--ink);
+    /* Fonte Clássica de Jornal */
+    font-family: 'Old Standard TT', 'Times New Roman', Times, serif; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    
+    /* Textura de papel sutil */
+    background-image: 
+        repeating-linear-gradient(
+            -45deg, 
+            rgba(0,0,0,0.05), 
+            rgba(0,0,0,0.05) 1px, 
+            transparent 1px, 
+            transparent 2px
+        );
+    background-size: 4px 4px;
+}
+
+/* CONTAINER PRINCIPAL (A "folha" do jornal) */
+.jornal-container {
+    width: 100%;
+    max-width: var(--max-width);
+    background-color: var(--paper-bg-inner); 
+    padding: 28px 38px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #c2b280; 
+}
+
+/* --- 3. ESTILOS DE CAPA E LINHAS --- */
+.capa {
+    text-align: center;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--ink); 
+    padding-bottom: 12px;
+}
+
+.titulo-jornal {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px; 
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    border-bottom: 5px double var(--ink);
+    padding-bottom: 5px;
+    color: var(--ink); 
+}
+
+.subtitulo-jornal {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+hr {
+    display: none;
+}
+
+.linha-divisoria {
+    border: none;
+    border-top: 1px solid var(--ink);
+    margin: 25px 0;
+}
+
+.separador-grande {
+    border-top: 4px solid var(--ink) !important; 
+    width: 100%;
+    height: 4px;
+    margin: 40px 0;
+}
+
+.titulo-novo-bloco {
+    text-align: center;
+    color: var(--ink); 
+    font-size: 1.8em; 
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* --- 4. MATÉRIA PRINCIPAL (LEAD GRID) --- */
+
+.materia-principal {
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+.materia-principal:hover {
+    background-color: #fcfcfc;
+}
+
+.manchete {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 2px 0 12px 0;
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--accent-blue); /* Azul marinho escuro */
+    text-align: left;
+}
+
+.conteudo-flex-principal {
+    display: grid;
+    grid-template-columns: 320px 1fr; 
+    gap: 30px;
+}
+
+.imagem-principal {
+    align-self: start;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    border: 1px solid var(--ink);
+    box-sizing: border-box;
+    filter: grayscale(8%) contrast(0.98); 
+}
+
+.texto-chamada {
+    column-count: 2;
+    column-gap: 28px;
+    font-size: 16px;
+    line-height: 1.55;
+    text-align: justify;
+    margin-top: 0;
+}
+
+.data-producao {
+    display: block;
+    font-size: 0.85em;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 15px;
+    text-align: right;
+    font-style: italic;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 5px;
+    column-span: all; 
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* --- 5. NOTAS SECUNDÁRIAS (COLUNAS) --- */
+
+.secoes-secundarias {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.15); 
+    padding-right: 30px;
+}
+
+.coluna:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.titulo-secao {
+    font-size: 1.6em;
+    font-weight: 700;
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: var(--ink);
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+
+.nota-secundaria {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    min-height: 350px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.nota-externa {
+    min-height: unset; 
+    background-color: #fff8e1; /* Cor de caixa de destaque suave */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.nota-secundaria h4 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+}
+
+.imagem-nota {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #555;
+    filter: grayscale(10%) contrast(0.95);
+}
+
+.nota-secundaria p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    flex-grow: 1; 
+}
+
+.leia-mais, .link-externo {
+    display: block;
+    text-align: right;
+    font-size: 1em;
+    color: var(--accent-blue); 
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- 6. POPUP (MODAL) --- */
+
+.popup {
+    display: none; 
+    position: fixed;
+    z-index: 20; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); 
+}
+
+.popup-conteudo {
+    background-color: var(--paper-bg-inner); 
+    margin: 5% auto; 
+    padding: 40px;
+    border: 5px double #333; 
+    width: 85%;
+    max-width: 900px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6); 
+    animation: fadeIn 0.5s;
+    font-family: 'Roboto', sans-serif;
+    color: var(--ink);
+    column-count: 2; 
+    column-gap: 30px;
+    text-align: justify;
+}
+
+.popup-conteudo h2 {
+    column-span: all; 
+    font-size: 2.5em;
+    color: var(--accent-blue); 
+    margin-top: 0;
+    border-bottom: 3px solid var(--accent-blue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+}
+
+.popup-conteudo img {
+    column-span: all; 
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #333;
+}
+
+.fechar-popup {
+    color: #333;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    column-span: all; 
+    text-align: right;
+    line-height: 0.8;
+}
+
+/* Estilo para links dentro do pop-up */
+.popup-conteudo a {
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* --- 7. MEDIA QUERY --- */
+@media (max-width: 900px) {
+    .jornal-container {
+        width: 95%;
+        padding: 15px;
+    }
+    .titulo-jornal {
+        font-size: 3em;
+    }
+    .secoes-secundarias, .conteudo-flex-principal, .popup-conteudo, .texto-chamada {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        column-count: 1;
+        display: block;
+    }
+    .coluna {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px dashed #555;
+        padding-bottom: 20px;
+    }
+    .imagem-principal {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .nota-secundaria {
+        min-height: unset;
+    }
+}
+/* ... [Restante do seu CSS não alterado] ... */
+
+/* ---------------------------------- */
+/* ----------- FOOTER (RODAPÉ) ------ */
+/* ---------------------------------- */
+
+.rodape-jornal {
+    border-top: 2px solid #333; /* Linha divisória robusta */
+    padding-top: 20px;
+    margin-top: 40px;
+    display: flex; /* Layout em colunas */
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.rodape-coluna {
+    flex: 1; /* Distribui o espaço igualmente */
+    min-width: 250px;
+}
+
+.titulo-rodape {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    color: #000;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.rodape-coluna p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.rodape-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-coluna li {
+    margin-bottom: 5px;
+}
+
+.rodape-coluna a {
+    text-decoration: none;
+    color: #000080; /* Cor de link de jornal (azul escuro) */
+}
+
+.rodape-coluna a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #666;
+}
