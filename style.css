@@ -21,168 +21,155 @@ body {
     font-family: 'Old Standard TT', 'Times New Roman', Times, serif; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    justify-content: center;
-    line-height: 1.5;
-    
-    /* Textura de papel sutil */
-    background-image: 
-        repeating-linear-gradient(
-            -45deg, 
-            rgba(0,0,0,0.05), 
-            rgba(0,0,0,0.05) 1px, 
-            transparent 1px, 
-            transparent 2px
-        );
-    background-size: 4px 4px;
 }
 
-/* CONTAINER PRINCIPAL (A "folha" do jornal) */
 .jornal-container {
-    width: 100%;
     max-width: var(--max-width);
-    background-color: var(--paper-bg-inner); 
-    padding: 28px 38px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    border: 1px solid #c2b280; 
+    margin: 0 auto;
+    padding: 20px 30px;
+    background: var(--paper-bg-inner);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+    column-count: 3; /* Layout de coluna para o texto em geral */
+    column-gap: 30px;
 }
 
-/* --- 3. ESTILOS DE CAPA E LINHAS --- */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #3b5998; /* Azul escuro de hover */
+}
+
+/* --- 3. CABEÇALHO (Capa) --- */
 .capa {
+    column-span: all;
     text-align: center;
-    margin-bottom: 18px;
-    border-bottom: 1px solid var(--ink); 
-    padding-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .titulo-jornal {
-    font-family: 'Playfair Display', serif;
-    font-size: 50px; 
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 0;
-    line-height: 1;
-    border-bottom: 5px double var(--ink);
-    padding-bottom: 5px;
-    color: var(--ink); 
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #8b0000; /* Vermelho escuro para destaque */
+    margin-bottom: 0px;
+    margin-top: 5px;
 }
 
 .subtitulo-jornal {
-    margin-top: 6px;
+    font-size: 1.1em;
+    font-weight: 400;
     color: var(--muted);
-    font-size: 13px;
-    letter-spacing: 0.6px;
-    font-style: italic;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
 }
 
 hr {
-    display: none;
-}
-
-.linha-divisoria {
+    column-span: all;
     border: none;
     border-top: 1px solid var(--ink);
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
-.separador-grande {
-    border-top: 4px solid var(--ink) !important; 
-    width: 100%;
-    height: 4px;
-    margin: 40px 0;
-}
-
-.titulo-novo-bloco {
-    text-align: center;
-    color: var(--ink); 
-    font-size: 1.8em; 
-    margin-bottom: 25px;
-    border-bottom: 2px solid var(--ink);
-    padding-bottom: 8px;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-}
-
-
-/* --- 4. MATÉRIA PRINCIPAL (LEAD GRID) --- */
-
+/* --- 4. MATÉRIA PRINCIPAL (Manchete) --- */
 .materia-principal {
+    column-span: all; /* Garante que a manchete ocupe toda a largura */
     margin-bottom: 30px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 15px;
-}
-.materia-principal:hover {
-    background-color: #fcfcfc;
 }
 
 .manchete {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    margin: 2px 0 12px 0;
-    line-height: 1.1;
-    font-weight: 700;
-    color: var(--accent-blue); /* Azul marinho escuro */
-    text-align: left;
+    font-size: 2.5em;
+    font-style: italic;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 10px;
 }
 
+/* FLEXBOX CRÍTICO: ALINHA IMAGEM E TEXTO LADO A LADO */
 .conteudo-flex-principal {
-    display: grid;
-    grid-template-columns: 320px 1fr; 
-    gap: 30px;
+    display: flex; /* ATIVA O FLEXBOX */
+    gap: 20px;
+    align-items: flex-start; /* Alinha o topo */
 }
 
 .imagem-principal {
-    align-self: start;
-    display: block;
-    width: 100%;
+    /* Ajusta a imagem para ocupar cerca de 40% da largura na seção principal */
+    width: 40%; 
     height: auto;
-    padding: 8px;
-    border: 1px solid var(--ink);
-    box-sizing: border-box;
-    filter: grayscale(8%) contrast(0.98); 
+    display: block;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .texto-chamada {
-    column-count: 2;
-    column-gap: 28px;
-    font-size: 16px;
-    line-height: 1.55;
+    /* Ajusta o texto para ocupar o restante do espaço (60%) */
+    flex: 1; 
+    font-size: 1.1em;
     text-align: justify;
-    margin-top: 0;
+    padding-top: 5px; /* Alinha melhor com o topo da imagem */
+    /* Remove o layout de coluna para este bloco */
+    column-count: 1; 
 }
 
-.data-producao {
-    display: block;
-    font-size: 0.85em;
-    color: var(--muted);
+
+/* --- 5. SEÇÕES SECUNDÁRIAS (Colunas) --- */
+.titulo-secao {
+    column-span: all;
+    font-size: 1.6em;
     font-weight: 400;
-    margin-top: 15px;
-    text-align: right;
-    font-style: italic;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 5px;
-    column-span: all; 
-    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--muted);
+    padding-bottom: 5px;
 }
 
+.titulo-novo-bloco {
+    column-span: all;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--accent-blue);
+    padding-bottom: 8px;
+    text-align: center;
+}
 
-/* --- 5. NOTAS SECUNDÁRIAS (COLUNAS) --- */
+.linha-divisoria {
+    column-span: all;
+    border-top: 1px dashed #bbb;
+    margin: 20px 0;
+}
+
+.separador-grande {
+    border-top: 2px solid #8b0000; /* Destaque maior */
+}
 
 .secoes-secundarias {
+    column-span: all;
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    margin-bottom: 20px;
 }
 
 .coluna {
     flex: 1;
-    min-width: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.15); 
-    padding-right: 30px;
+    min-width: 280px;
+    border-right: 1px dashed #ccc;
+    padding-right: 20px;
 }
 
 .coluna:last-child {
@@ -190,179 +177,84 @@ hr {
     padding-right: 0;
 }
 
-.titulo-secao {
-    font-size: 1.6em;
-    font-weight: 700;
-    border-bottom: 3px double var(--ink);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    color: var(--ink);
-    font-family: 'Playfair Display', serif;
-    text-transform: uppercase;
-}
-
 .nota-secundaria {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1); 
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 10px;
     cursor: pointer;
-    min-height: 350px; 
-    display: flex;
-    flex-direction: column;
+    transition: background 0.3s, box-shadow 0.3s;
+    min-height: 350px; /* Garante altura uniforme */
 }
 
-.nota-externa {
-    min-height: unset; 
-    background-color: #fff8e1; /* Cor de caixa de destaque suave */
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+.nota-secundaria:hover {
+    background: #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .nota-secundaria h4 {
-    font-size: 1.3em;
-    font-weight: 700;
-    color: var(--accent-blue);
+    font-size: 1.2em;
     margin-top: 0;
-    margin-bottom: 8px;
-    line-height: 1.2;
-    font-family: 'Playfair Display', serif;
+    color: var(--accent-blue);
 }
 
 .imagem-nota {
     width: 100%;
-    height: auto;
-    margin: 10px 0;
-    display: block;
-    border: 1px solid #555;
-    filter: grayscale(10%) contrast(0.95);
-}
-
-.nota-secundaria p {
-    font-size: 0.95em;
-    line-height: 1.4;
-    flex-grow: 1; 
+    height: 150px; /* Altura fixa para consistência visual */
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block; /* Garante que a imagem se comporte como bloco */
 }
 
 .leia-mais, .link-externo {
     display: block;
-    text-align: right;
-    font-size: 1em;
-    color: var(--accent-blue); 
-    font-style: italic;
-    font-weight: 700;
     margin-top: 10px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    padding-top: 5px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* --- 6. POPUP (MODAL) --- */
-
-.popup {
-    display: none; 
-    position: fixed;
-    z-index: 20; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8); 
-}
-
-.popup-conteudo {
-    background-color: var(--paper-bg-inner); 
-    margin: 5% auto; 
-    padding: 40px;
-    border: 5px double #333; 
-    width: 85%;
-    max-width: 900px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6); 
-    animation: fadeIn 0.5s;
-    font-family: 'Roboto', sans-serif;
-    color: var(--ink);
-    column-count: 2; 
-    column-gap: 30px;
-    text-align: justify;
-}
-
-.popup-conteudo h2 {
-    column-span: all; 
-    font-size: 2.5em;
-    color: var(--accent-blue); 
-    margin-top: 0;
-    border-bottom: 3px solid var(--accent-blue);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-    text-align: left;
-}
-
-.popup-conteudo img {
-    column-span: all; 
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    border: 2px solid #333;
-}
-
-.fechar-popup {
-    color: #333;
-    float: right;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    column-span: all; 
-    text-align: right;
-    line-height: 0.8;
-}
-
-/* Estilo para links dentro do pop-up */
-.popup-conteudo a {
-    color: var(--accent-blue);
     font-weight: 700;
-    text-decoration: none;
+    color: #8b0000; /* Destaque em vermelho */
+    font-size: 0.95em;
 }
 
-/* --- 7. MEDIA QUERY --- */
-@media (max-width: 900px) {
-    .jornal-container {
-        width: 95%;
-        padding: 15px;
-    }
-    .titulo-jornal {
-        font-size: 3em;
-    }
-    .secoes-secundarias, .conteudo-flex-principal, .popup-conteudo, .texto-chamada {
-        flex-direction: column;
-        grid-template-columns: 1fr;
-        column-count: 1;
-        display: block;
-    }
-    .coluna {
-        border-right: none;
-        padding-right: 0;
-        border-bottom: 1px dashed #555;
-        padding-bottom: 20px;
-    }
-    .imagem-principal {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    .nota-secundaria {
-        min-height: unset;
-    }
+/* Estilo para notas externas */
+.nota-externa {
+    background: #fff;
+    border: 1px solid #aaa;
+    min-height: 200px; /* Altura menor para links externos */
 }
-/* ... [Restante do seu CSS não alterado] ... */
+
+.titulo-externo {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.resumo-externo {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+}
+
+/* Estilo para notas de Controvérsia */
+.nota-controversa {
+    background: #fff8e1; /* Amarelo pálido para destaque */
+    border: 2px solid #ffcc00;
+}
+
+/* Data de produção */
+.data-producao {
+    display: block;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+    font-style: italic;
+    column-span: all;
+}
+
 
 /* ---------------------------------- */
 /* ----------- FOOTER (RODAPÉ) ------ */
 /* ---------------------------------- */
 
 .rodape-jornal {
+    column-span: all;
     border-top: 2px solid #333; /* Linha divisória robusta */
     padding-top: 20px;
     margin-top: 40px;
@@ -375,44 +267,152 @@ hr {
 
 .rodape-coluna {
     flex: 1; /* Distribui o espaço igualmente */
-    min-width: 250px;
+    min-width: 200px;
 }
 
 .titulo-rodape {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2em;
     color: #000;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.rodape-coluna p {
-    margin: 5px 0;
-    line-height: 1.4;
+    margin-bottom: 10px;
 }
 
 .rodape-coluna ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.rodape-coluna li {
-    margin-bottom: 5px;
-}
-
-.rodape-coluna a {
-    text-decoration: none;
-    color: #000080; /* Cor de link de jornal (azul escuro) */
-}
-
-.rodape-coluna a:hover {
-    text-decoration: underline;
+.rodape-coluna ul li a {
+    color: #444;
 }
 
 .copy {
     margin-top: 20px;
     font-size: 0.8em;
-    color: #666;
+    color: #777;
+}
+
+/* ---------------------------------- */
+/* ----------- POPUP MODAL ---------- */
+/* ---------------------------------- */
+
+.popup {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+}
+
+.popup-conteudo {
+    background-color: var(--paper-bg-inner);
+    margin: 5% auto; 
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    /* Força o layout de texto dentro do popup para ser coluna única */
+    column-count: 1;
+}
+
+#popup-titulo {
+    font-size: 2em;
+    margin-top: 0;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+#popup-imagem {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+}
+
+#popup-texto-completo {
+    text-align: justify;
+    font-size: 1em;
+    /* Permite que o texto dentro do popup tenha múltiplas colunas */
+    column-count: 2; 
+    column-gap: 25px;
+    line-height: 1.7;
+}
+
+.fechar-popup {
+    color: #aaa;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.fechar-popup:hover,
+.fechar-popup:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* --- 6. RESPONSIVIDADE (Celulares e Tablets) --- */
+
+@media (max-width: 900px) {
+    /* Desativa o layout de 3 colunas */
+    .jornal-container {
+        column-count: 1;
+        padding: 15px;
+    }
+
+    /* MATÉRIA PRINCIPAL - Desativa o Flexbox */
+    .conteudo-flex-principal {
+        display: block; /* Volta para o layout de bloco em telas pequenas */
+    }
+    
+    .imagem-principal {
+        width: 100%; /* Imagem ocupa toda a largura */
+        margin-bottom: 15px;
+    }
+    
+    .texto-chamada {
+        column-count: 1;
+        font-size: 1em;
+    }
+
+    /* Seções Secundárias */
+    .secoes-secundarias {
+        display: block; /* As notas ficam empilhadas */
+    }
+    
+    .coluna {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px dashed #555;
+        padding-bottom: 20px;
+    }
+
+    .coluna:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .nota-secundaria {
+        min-height: unset; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    /* Rodapé */
+    .rodape-jornal {
+        flex-direction: column;
+    }
+
+    .rodape-coluna {
+        min-width: unset;
+    }
 }
