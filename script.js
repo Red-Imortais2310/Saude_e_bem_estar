@@ -1,141 +1,155 @@
 // --- DADOS COMPLETOS DAS MATÉRIAS (Para o Pop-up e Links Externos) ---
 const materiasData = {
     // MATÉRIA PRINCIPAL (Neurociência)
-    'neurociencia': {
+    'tecnologia_e_saude': {
         titulo: 'Revolução da Neurociência: Cientistas Decodificam o Efeito do Estresse Crônico no Cérebro',
-        imagem: './imagens/img_principal.jpg', // CORRIGIDO PARA O NOME LOCAL
-        data: '29 de Outubro de 2025', 
+        imagem: './imagens/img_materia_principal2.jpg', // CORRIGIDO PARA O NOME LOCAL
+        data: '21 de Novembro de 2025', 
         texto: `
             <div style="column-span: all; margin-bottom: 20px;">
-                <p style="font-style: normal; column-span: all; font-size: 1.1em; text-align: justify;">Novas técnicas de mapeamento cerebral, utilizando ressonância magnética funcional avançada, revelam as alterações estruturais e químicas causadas pelo estresse de longo prazo. A descoberta abre caminho para tratamentos mais eficazes.</p>
+                <p style="font-style: normal; column-span: all; font-size: 1.1em; text-align: justify;">A inteligência artificial vem contribuindo significativamente para a transformação de vários setores da sociedade, inclusive na área da saúde. A implantação da tecnologia na medicina foi um grande avanço por possibilitar o desenvolvimento de diagnósticos mais precisos, tratamentos personalizados e aprimorar a eficiência de diferentes procedimentos médicos.</p>
             </div>
             <br>
-            A pesquisa, publicada no "Journal of Advanced Neuroscience", detalha como o hipocampo, a área do cérebro responsável pela memória e emoções, sofre atrofia significativa em indivíduos com estresse crônico não tratado. A atrofia do hipocampo está diretamente ligada à dificuldade de regulação emocional e à falha na formação de novas memórias, sintomas comuns em casos de depressão e ansiedade severas.
-            <br><br>
-            Os cientistas esperam que esses achados possam levar ao desenvolvimento de intervenções farmacológicas e terapêuticas mais direcionadas, marcando um avanço significativo no tratamento de distúrbios relacionados ao estresse crônico.
+            A cirurgia robótica é uma ferramenta cada vez mais popular em diferentes países. Ela permite aos médicos operarem pacientes com mais precisão, sem precisar fazer grandes incisões ou sacrificar outros órgãos. Isso significa que os pacientes geralmente se recuperam mais rapidamente e sentem menos dor, o que também pode reduzir os custos do cuidado.
+            Os procedimentos cirúrgicos assistidos por robôs oferecem podemos citar a prostatectomia, a cirurgia de hérnia, de endometriose, entre outras. A robótica é capaz de auxiliar em procedimentos que exigem mais delicadeza e precisão, tornando os procedimentos mais seguros e com resultados mais eficazes.
+            <a href="https://andrelug.com/a-revolucao-da-inteligencia-artificial-na-cirurgia-como-a-tecnologia-transforma-a-medicina/" target="_blank">Leia mais sobre a revolução da inteligência artificial na cirurgia</a>
         `
     },
     
-    // MATÉRIA 1: SAÚDE MENTAL
-    'saude_mental': { 
-        titulo: 'Saúde Mental em Crise: O Impacto da Sobrecarga de Mídia e Tensão Contínua',
-        imagem: './imagens/img1.jpg', // CORRIGIDO PARA O NOME LOCAL
-        data: '28 de Outubro de 2025',
+    // MATÉRIA 1: Prevenção da Dengue
+    'combate a dengue': { 
+        titulo: 'Combate a dengue em Cubatão',
+        imagem: './imagens/img_dengue.png', // CORRIGIDO PARA O NOME LOCAL
+        data: '25 de Novembro de 2025',
         texto: `
-            O clima de incerteza e a constante exposição a notícias negativas e redes sociais têm cobrado um preço alto na saúde mental da população. Psiquiatras alertam para o aumento da Síndrome de Burnout e de transtornos de ansiedade.
+            Agentes do Serviço de Controle de Zoonoses, da Secretaria Municipal de Saúde de Cubatão, percorrem a região do Jardim Costa e Silva de casa em casa para orientar os moradores sobre a importância da eliminação de possíveis criadouros do mosquito da dengue e outras arboviroses. As ações tiveram início na semana passada e prosseguem até amanhã (19). Na semana que vem, a previsão é de que os agentes estejam no Jardim 31 de Março....
             <br><br>
             A sobrecarga informativa e a dificuldade em desconectar-se contribuem para um estado de alerta constante, esgotando os recursos cognitivos e emocionais. Profissionais de saúde recomendam a delimitação estrita de horários de exposição à mídia e a utilização de ferramentas que ajudem na regulação emocional, como a meditação e o exercício físico.
-            
+            Semana de Educação em Saúde – Os agentes percorrem também nesta semana salas de aulas das escolas municipais para conversar com as crianças. É a Semana de Educação em Saúde. Eles estiveram também na semana passada, na Unidade Municipal de Ensino (UME) Amazonas, na Vila Nova. A programação continua nesta quarta, na UME Ulisses Guimarães, na Vila Natal, e, no dia 13, na UME Maranhão, no mesmo bairro.
             <br><br>
             <div class="links-adicionais-popup" style="column-span: all;">
                 <strong>Links de Aprofundamento:</strong>
                 <ul>
-                    <li><a href="https://oncocentermedicos.com.br/5-aplicativos-para-ajudar-a-cuidar-da-sua-saude-mental-e-emocional/" target="_blank">Artigo: 5 Aplicativos para Cuidar da Sua Saúde Mental e Emocional</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=hvU-WUGF8_w" target="_blank">Vídeo (YouTube): Qual é o impacto das redes sociais na sua saúde mental?</a></li>
+                    <li><a href="https://www.cubatao.sp.gov.br/combate-a-dengue-prefeitura-intensifica-visitas-de-agentes-no-jardim-costa-e-silva//" target="_blank">Como a prefeitura de Cubatão intensifica o combate à dengue.</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=eHtiqqaUJ3s" target="_blank">Vídeo (YouTube):Cubatão realizou ações no Dia D de Combate a Dengue. </a></li>
                 </ul>
             </div>
         `
     },
     
-    // MATÉRIA 2: NUTRIÇÃO DO FUTURO
-    'nutricao': { 
-        titulo: 'Nutrição do Futuro: Proteínas Alternativas Impulsionam Alimentação Saudável e Sustentável',
-        imagem: './imagens/img2.jpg', // CORRIGIDO PARA O NOME LOCAL
-        data: '27 de Outubro de 2025',
+    // MATÉRIA 2: Ciclovia em PG
+    'acessibilidade': { 
+        titulo: 'Acessibilidade e lazer são destaques do futuro Parque Mirim, em PG',
+        imagem: './imagens/img_ciclo_pg.jpg', // CORRIGIDO PARA O NOME LOCAL
+        data: '25 de Novembro de 2025',
         texto: `
-            O investimento maciço em alimentos sustentáveis e proteínas alternativas (como as vegetais e a base de insetos) está revolucionando a economia global. O setor atinge patamares recordes, impulsionado pela demanda por hábitos alimentares mais saudáveis e ecologicamente corretos.
+            A ciclovia na Praia Grande está passando por melhorias significativas. As obras de reurbanização do trecho conhecido como Calipal, que abrange as Ruas Sérgio Gregório e João Roberto Correia, estão sendo realizadas e devem ser concluídas até o final de 2024. Entre as melhorias, haverá a duplicação das faixas de rolamento e a colocação de piso intertravado nas calçadas, além da transposição da ciclovia no centro da via. Essas melhorias visam aumentar a mobilidade e a acessibilidade na região, beneficiando um trecho de aproximadamente 2 quilômetros de extensão.
             <br><br>
-            Relatórios de mercado apontam que esta nova fronteira da nutrição é a principal responsável pelo crescimento inesperado. No entanto, levantam cautela quanto à necessidade de regulamentação para garantir a segurança alimentar e a aceitação do consumidor. O debate sobre segurança alimentar e sustentabilidade é crucial para o futuro da saúde pública.
+            A inclusão no local já é iniciada do lado de fora, pois todo o passeio no arredor do parque contará com piso tátil (que serve para orientar no solo pessoas com deficiência visual ou baixa visão). Além disso, em cada entrada do parque serão instalados mapas táteis para que pessoas com deficiência visual possam se guiar para cada um dos pontos de interesse do parque e o piso de todo o parque foi escolhido para ser liso sem obstáculos.
             
             <br><br>
             <div class="links-adicionais-popup" style="column-span: all;">
                 <strong>Links de Aprofundamento:</strong>
                 <ul>
-                    <li><a href="https://www.youtube.com/watch?v=4wDwns2fJDI" target="_blank">Vídeo (YouTube): Nutrição do Futuro - Alimentação saudável e sustentável no século XXI</a></li>
-                    <li><a href="https://conexaociencia.com.br/a-alimentacao-do-futuro-proteinas-alternativas/" target="_blank">Artigo: A Alimentação do Futuro: Proteínas Alternativas</a></li>
+                    <li><a href="https://www.bing.com/videos/riverview/relatedvideo?&q=nova+ciclovia+na+mirim+praia+grande&&mid=B440550D3161721C667FB440550D3161721C667F&&FORM=VRDGAR" target="_blank">Vídeo : Nova ciclovia no bairro Mirim Praia Grande/SP</a></li>
+                    <li><a href="https://www2.praiagrande.sp.gov.br/noticia/acessibilidade-e-lazer-sao-destaques-do-futuro-parque-mirim-em-pg" target="_blank">Artigo: Matéria sobre a ciclovia no bairro de Praia Grande/Prefeitura de Praia Grande.</a></li>
                 </ul>
             </div>
         `
     },
     
-    // MATÉRIA 3: FITNESS E I.A.
-    'fitness_ia': { 
-        titulo: 'Tecnologia no Treino: Como a Inteligência Artificial Aumenta a Adesão ao Exercício Físico',
-        imagem: './imagens/img3.jpg', // CORRIGIDO PARA O NOME LOCAL
+    // MATÉRIA 3: \Prefeitura oferece aulas gratuitas de Pilates, Capoeira e Defesa Pessoal para pessoas na terceira idade
+    'fitness': { 
+        titulo: 'Tecnologia no Treino: Aumenta a Adesão ao Exercício Físico',
+        imagem: './imagens/img_aulas_pilates2.jpeg', // CORRIGIDO PARA O NOME LOCAL
         data: '26 de Outubro de 2025',
         texto: `
-            A Inteligência Artificial (I.A.) está transformando a forma como as pessoas se exercitam, oferecendo personalização e motivação para quebrar o sedentarismo. Aplicativos e dispositivos vestíveis usam I.A. para criar rotinas sob medida e monitorar o desempenho com precisão.
-            <br><br>
-            Especialistas em educação física e tecnologia afirmam que o feedback em tempo real e a gamificação dos exercícios são chaves para aumentar a adesão a longo prazo. O uso da I.A. no treino em casa democratiza o acesso a programas de alta qualidade que antes só estavam disponíveis com treinadores pessoais, tornando o bem-estar acessível a todos.
-            
-            <br><br>
+         Com foco no envelhecimento ativo e saudável, São Vicente está oferecendo aulas gratuitas de Pilates, Capoeira 60+ e Defesa Pessoal para pessoas da terceira idade. A iniciativa é conduzida pela Secretaria de Esportes e Lazer no Complexo Esportivo Beija-Flor, localizado na Esplanada dos Barreiros, e já beneficiou mais de 1.200 moradores da cidade.
+         Faça parte do grupo do Diário no WhatsApp e Telegram.
+         Mantenha-se bem informado.
+         A proposta vai além da atividade física. Além de ganhos físicos como equilíbrio, força e flexibilidade, os participantes relatam melhora na autoestima, na segurança e até no bem-estar emocional. As aulas são conduzidas por profissionais qualificados e continuam com vagas abertas para novas inscrições.
+         
+         <br><br>
+            Compromisso com o bem-estar da terceira idade
+            O projeto reforça o compromisso da cidade com o público da terceira idade, promovendo não apenas benefícios físicos, mas também sociais e emocionais. As atividades proporcionam autonomia, convivência e inclusão para idosos que desejam manter uma rotina ativa e mais saudável.
+
+           <br><br>
             <div class="links-adicionais-popup" style="column-span: all;">
                 <strong>Links de Aprofundamento:</strong>
                 <ul>
-                    <li><a href="https://www.eefe.usp.br/destaque-eefe/intelig%C3%AAncia-artificial-pode-ajudar-aumentar-ades%C3%A3o-ao-exerc%C3%ADcio-f%C3%ADsico" target="_blank">Artigo: Inteligência Artificial pode ajudar a aumentar adesão ao exercício físico</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=i7QwQPiAa0A" target="_blank">Vídeo (YouTube): Treino em Casa com Inteligência Artificial | Dicas e Apps</a></li>
+                    <li><a href="https://www.diariodolitoral.com.br/sao-vicente/sao-vicente-amplia-acesso-ao-bem-estar-com-aulas-gratuitas-para-idosos/197365/" target="_blank">Artigo: Saude e Bem estar,Prefeitura de São Vicente</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=upVWEwi8tZA" target="_blank">Vídeo (YouTube): Aulas de Capoeira e Pilates.</a></li>
                 </ul>
             </div>
         `
     },
 
     // --- MATÉRIAS SECUNDÁRIAS E EXTERNAS ---
-    'depressao': { linkExterno: 'https://revistaft.com.br/depressao-a-doenca-do-seculo-xxi/' },
-    'cardiovascular': { linkExterno: 'https://abccardiol.org/article/estatistica-cardiovascular-brasil-2023/' },
-    'ergonomica': { linkExterno: 'https://www.ufpb.br/lat/contents/documentos/artigos-das-noticias/analise-ergonomica-em-postos-de-trabalho-remoto.pdf' },
+    'burnout': { linkExterno: 'https://br.psicologia-online.com/sindrome-de-burnout-o-que-e-sintomas-e-tratamento-127.html' },
+    'ansiedade': { linkExterno: 'https://www.cuf.pt/saude-a-z/ansiedade' },
+    'doencas_de_2025': { linkExterno: 'https://www.alertasaude.com/blog-post35' },
     
     // NOTÍCIAS INTERNACIONAIS (Links Externos)
-    'ineficiencia_eua': { 
-        linkExterno: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2119468', 
-        videoLink: 'https://www.youtube.com/watch?v=B1BmEtY2bmc' 
+    'saude_eua': { 
+        linkExterno: 'https://imigrareua.com/sistema-de-saude-nos-eua/', 
+        videoLink: 'https://www.youtube.com/watch?v=XzXp0p6__0E' 
     },
-    'ineficiencia_europa': { 
-        linkExterno: 'https://www.bbc.com/portuguese/internacional-52040181' 
+    'saude_alemanha': { 
+        linkExterno: 'https://www.eurodicas.com.br/sistema-de-saude-na-alemanha/',
+        videoLink: 'https://www.youtube.com/watch?v=x028ibjgdtc'  
     },
-    'ineficiencia_asia': { 
-        linkExterno: 'https://futurodasaude.com.br/hospitais-inteligentes-artigo/' 
+    'saude_na_asia': { 
+        linkExterno: 'https://internationalhealth.com/pt/Sistema-de-Saude-e-Seguro-Saude/China' ,
+        videoLink: 'https://www.youtube.com/watch?v=txg8atF-_HQ' 
     },
 
     // Matérias Controversas (Abrem pop-up com texto interno)
-    'vacinacao': {
-        titulo: 'Vacinação COVID: Debate sobre Mandato Obrigatório em Meio a Nova Onda',
-        imagem: './imagens/img_vac.jpg', // CORRIGIDO PARA O NOME LOCAL
+    'dieta_keto': {
+        titulo: 'Dieta cetogênica',
+        imagem: './imagens/img_dieta_keto.webp', // CORRIGIDO PARA O NOME LOCAL
         data: '04 de Novembro de 2025', 
         texto: `
             <div style="column-count: 1; margin-bottom: 20px;">
-                <p style="font-style: normal; column-span: all; font-size: 1.1em;">Com o ressurgimento de novas variantes, a discussão sobre a obrigatoriedade da vacinação ganhou os holofotes. Apresentamos os argumentos dos principais comentaristas da área de saúde:</p>
+                <p style="font-style: normal; column-span: all; font-size: 1.1em;">A dieta cetogênica é um plano alimentar com baixo teor de carboidratos (5–10% das calorias diárias), alto teor de gorduras saudáveis (70–75%) e quantidade moderada de proteínas (20–25%).
+             O objetivo é levar o corpo à cetose, onde a gordura é convertida em cetonas para gerar energia.:</p>
             </div>
             
             <div style="margin-top: 20px; column-span: all;">
-                <h3 style="color: green; border-bottom: 2px solid green; padding-bottom: 5px;">Argumento A FAVOR: Dr. Eduardo Santos</h3>
-                <p>O mandato de vacinação não é uma violação de liberdade, mas um pacto social. A saúde pública deve prevalecer sobre o individualismo, especialmente em uma crise. A queda nas taxas de hospitalização prova que a imunização em massa é a única saída sustentável para a economia e para salvar vidas.</p>
+                <h3 style="color: green; border-bottom: 2px solid green; padding-bottom: 5px;">Argumento A FAVOR: Dra. Helena Soares, Nutróloga (Focada em Metabolismo e Obesidade)</h3>
+                <p>A dieta Keto é inegavelmente eficaz no curto prazo para perda de peso significativa. A restrição de carboidratos estabiliza os níveis de açúcar no sangue e insulina, o que ajuda a reduzir a fome e os picos de compulsão. Além disso, a cetose tem se mostrado uma ferramenta terapêutica valiosa. Originalmente usada para controlar a epilepsia refratária, há pesquisas promissoras sobre seus benefícios em pacientes com diabetes tipo 2 e, em alguns casos, doenças neurodegenerativas. Para pacientes com obesidade severa, pode ser o catalisador que oferece resultados rápidos e motivadores para iniciar uma mudança de estilo de vida..</p>
+                <p><strong>"O estado de cetose é um 'interruptor' metabólico poderoso que otimiza a queima de gordura. Quando bem supervisionada, a Keto pode ser a intervenção mais rápida e segura para reverter a resistência à insulina."</strong></p>
                 <br>
-                <h3 style="color: red; border-bottom: 2px solid red; padding-bottom: 5px;">Argumento CONTRA: Dra. Helena Costa</h3>
-                <p>A coerção mina a confiança na ciência. A liberdade de escolha, baseada no consentimento informado, é fundamental. O foco deveria estar na melhoria das terapias e na proteção dos grupos de risco, não na imposição de um medicamento a toda a população, independentemente da idade ou histórico médico.</p>
-            </div>
+                <h3 style="color: red; border-bottom: 2px solid red; padding-bottom: 5px;">Argumento CONTRA: Dr. Ricardo Almeida, Nutricionista Clínico (Focado em Sustentabilidade Dietética)</h3>
+                <p>A principal preocupação com a Dieta Cetogênica é a sua sustentabilidade. A restrição drástica de grupos alimentares essenciais (como frutas, grãos integrais e muitos vegetais ricos em amido) torna a dieta muito difícil de manter no contexto social e cotidiano de uma pessoa. Mais grave, essa restrição aumenta o risco de deficiências nutricionais, especialmente em vitaminas do complexo B, fibras, e certos minerais essenciais. A falta de fibra pode levar a problemas digestivos crônicos. Além disso, para algumas pessoas, a alta ingestão de gordura saturada pode impactar negativamente o perfil lipídico (colesterol), especialmente se não houver um foco rigoroso na qualidade das gorduras consumidas.</p>
+                <br>
+                <p><strong>"Uma dieta deve ser um estilo de vida que você possa amar. A Keto exige um sacrifício de alimentos ricos em nutrientes e é metabolicamente estressante. A longo prazo, uma dieta balanceada e menos restritiva, como a Mediterrânea, é mais benéfica e segura para a saúde geral."</strong></p>
+                </div>
         `
     },
-    'ia': {
-        titulo: 'I.A. e Empregos: Ameaça Global ou Nova Fronteira de Produtividade?',
-        imagem: './imagens/img_ia.jpg', // CORRIGIDO PARA O NOME LOCAL
-        data: '03 de Novembro de 2025', 
+    'telemedicina': {
+        titulo: 'Telemedicina e Consultas Virtuais',
+        imagem: './imagens/img_telemed2.webp', // CORRIGIDO PARA O NOME LOCAL
+        data: '18 de Novembro de 2025', 
         texto: `
             <div style="column-count: 1; margin-bottom: 20px;">
-                <p style="font-style: normal; column-span: all; font-size: 1.1em;">A expansão da Inteligência Artificial nos setores de serviços e indústria levanta questões urgentes sobre o futuro do trabalho. Duas visões opostas dominam o debate:</p>
+                <p style="font-style: normal; column-span: all; font-size: 1.1em;"> Saúde e Tecnologia: O Futuro da Medicina na Palma da Mão :</p>
             </div>
             
             <div style="margin-top: 20px; column-span: all;">
-                <h3 style="color: green; border-bottom: 2px solid green; padding-bottom: 5px;">Argumento A FAVOR: Economista Marcos Viana</h3>
-                <p>A I.A. é uma ferramenta de produtividade sem precedentes. A história mostra que cada revolução tecnológica cria mais empregos do que destrói, apenas em novas categorias. Precisamos de requalificação profissional maciça, não de medo. A automação libera o capital humano para tarefas mais complexas.</p>
+                <h3 style="color: green; border-bottom: 2px solid green; padding-bottom: 5px;">Argumento A FAVOR: Dra. Carolina Mendes, Especialista em Saúde Digital e Cardiologista</h3>
+                <p>A Telemedicina é um instrumento de democratização da saúde. Para pacientes em áreas remotas, com dificuldades de mobilidade ou sem tempo para deslocamento, uma consulta virtual elimina barreiras e garante a continuidade do tratamento. A tecnologia permite um monitoramento remoto mais eficiente de doenças crônicas, como diabetes ou hipertensão, onde dispositivos conectados (wearables) enviam dados em tempo real ao médico. Isso permite intervenções proativas antes que o quadro se agrave. É ideal para acompanhamentos, triagens iniciais, resultados de exames e saúde mental, economizando tempo e recursos para todos.</p>
+                <p><strong>"O futuro da medicina é híbrido. A tecnologia não substitui o médico, mas o potencializa, permitindo que o cuidado chegue a quem mais precisa, com maior frequência e menor custo operacional."</strong></p>
                 <br>
-                <h3 style="color: red; border-bottom: 2px solid red; padding-bottom: 5px;">Argumento CONTRA: Socióloga Lígia Mendes</h3>
-                <p>Desta vez é diferente. A I.A. atinge o trabalho cognitivo, não apenas o manual. Milhões de empregos de "colarinho branco" estão em risco, e a velocidade da mudança impede a adaptação. Isso levará a uma desigualdade social extrema e exigirá uma renda básica universal.</p>
-            </div>
+                <h3 style="color: red; border-bottom: 2px solid red; padding-bottom: 5px;">Argumento CONTRA: Dr. Paulo Bittencourt, Clínico Geral e Defensor da Medicina Presencial</h3>
+                <p>Embora a conveniência seja inegável, a Telemedicina nunca poderá substituir a avaliação clínica completa. Muitas patologias (especialmente as mais complexas) exigem o exame físico, que inclui palpação, ausculta e avaliação de sinais vitais que não são visíveis pela tela. Há um risco significativo de diagnósticos imprecisos ou de subestimar a gravidade de um sintoma sem o contato presencial. Além disso, a troca de informações de saúde sensíveis pela internet levanta sérias preocupações de privacidade e segurança de dados (LGPD). Falhas nos sistemas podem expor dados confidenciais, minando a confiança no sistema e potencialmente expondo o paciente a riscos.</p>
+                <br>
+                <p><strong>"A medicina é baseada em detalhes. A 'pista' que leva a um diagnóstico correto muitas vezes está no exame físico minucioso e na interação humana. Não podemos trocar a segurança da avaliação completa pela mera conveniência do clique."</strong></p>
+                </div>
         `
     },
-    'energia': {
-        titulo: 'Transição Energética: Rapidez Total ou Segurança Logística e Econômica?',
-        imagem: './imagens/img_eolica.jpg', // CORRIGIDO PARA O NOME LOCAL
+    'meio ambiente': {
+        titulo: 'O Passado de Poluição: O Preço da Industrialização Acelerada',
+        imagem: './imagens/img_cubatao.jpg', // CORRIGIDO PARA O NOME LOCAL
         data: '02 de Novembro de 2025', 
         texto: `
             <div style="column-count: 1; margin-bottom: 20px;">
@@ -143,14 +157,15 @@ const materiasData = {
             </div>
             
             <div style="margin-top: 20px; column-span: all;">
-                <h3 style="color: green; border-bottom: 2px solid green; padding-bottom: 5px;">Argumento A FAVOR: Ambientalista Pedro Alves</h3>
-                <p>Não há mais tempo. Cada atraso significa um aumento irreversível de danos climáticos. A tecnologia limpa já existe; o que falta é vontade política e investimento. A transição rápida é, na verdade, a única forma de garantir a segurança econômica de longo prazo.</p>
+                <h3 style="color: green; border-bottom: 2px solid green; padding-bottom: 5px;">Argumento A FAVOR: Dra. Marina Alves, Geógrafa e Especialista em Sustentabilidade Urbana</h3>
+                <p>O caso Cubatão prova que a degradação ambiental é reversível com políticas públicas rigorosas e compromisso. A virada começou na década de 1980 com o Programa de Controle da Poluição Ambiental, que impôs limites rígidos de emissão às indústrias, obrigando-as a instalar filtros e modernizar processos. A CETESB (Companhia Ambiental do Estado de São Paulo) foi crucial no monitoramento contínuo, garantindo que as emissões caíssem drasticamente. O resultado foi tão significativo que, em 1992, a ONU reconheceu Cubatão como "Cidade Símbolo da Recuperação Ambiental". A saúde da população se beneficiou diretamente, com quedas expressivas nas taxas de mortalidade infantil e internações por doenças respiratórias.</p>
                 <br>
-                <h3 style="color: red; border-bottom: 2px solid red; padding-bottom: 5px;">Argumento CONTRA: Engenheiro Fábio Nogueira</h3>
-                <p>Apressar a transição sem infraestrutura de armazenamento de energia confiável (baterias) levará a apagões e picos de preço, penalizando o consumidor. Devemos manter o gás natural (menos poluente) como ponte, garantindo a segurança energética antes de um salto perigoso.</p>
+                <p></p><strong>"Cubatão é a prova de que a saúde de uma cidade é inseparável da saúde do seu ecossistema. O sucesso aqui veio da regulação forte e da fiscalização que transformaram o desafio em modelo de desenvolvimento sustentável."</strong></p>
+                <h3 style="color: red; border-bottom: 2px solid red; padding-bottom: 5px;">Argumento CONTRA: Dr. Roberto Souza, Sociólogo e Pesquisador em Saúde Ocupacional</h3>
+                <p>Embora a poluição do ar tenha sido controlada, o legado do "Vale da Morte" ainda persiste. A cidade lida com passivos ambientais significativos, como a contaminação do solo e da água por metais pesados e resíduos químicos industriais históricos, incluindo o famoso "Caso Rhodia" (contaminação por Hexaclorobenzeno - HCB).</p>
             </div>
         `
-    }
+    },
 };
 
 // --- SELEÇÃO DE ELEMENTOS (Mantida) ---

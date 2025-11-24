@@ -85,7 +85,10 @@ hr {
     column-span: all; /* Garante que a manchete ocupe toda a largura */
     margin-bottom: 30px;
 }
-
+.materia-principal:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra leve */
+    transform: translateY(-2px); /* Efeito de "levantamento" suave */
+}
 .manchete {
     font-size: 2.5em;
     font-style: italic;
@@ -176,7 +179,7 @@ hr {
     border-right: none;
     padding-right: 0;
 }
-
+.materia-principal,
 .nota-secundaria {
     background: #f7f7f7;
     border: 1px solid #ddd;
