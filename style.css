@@ -296,6 +296,43 @@ hr {
     font-size: 0.8em;
     color: #777;
 }
+/* --- ESTILO DO BOTÃO/LINK FALE CONOSCO NO FOOTER --- */
+
+#botao-fale-conosco {
+    /* Aparência */
+    display: inline-block; /* Para que o link se comporte como um bloco e aceite padding */
+    padding: 10px 20px;
+    margin: 15px 0 20px 0; /* Espaçamento: 15px acima, 20px abaixo */
+    
+    /* Tipografia */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #ffffff; /* Texto branco */
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    
+    /* Cores e Borda (Aparência de 'Botão Primário') */
+    background-color: #d82c2c; /* Vermelho forte para destaque */
+    border: 2px solid #a32222;
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    
+    /* Transição para efeito hover suave */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efeito ao passar o mouse */
+#botao-fale-conosco:hover {
+    background-color: #a32222; /* Fica um vermelho mais escuro */
+    border-color: #7a1919;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para profundidade */
+}
+
+/* Efeito ao clicar (Estado ativo) */
+#botao-fale-conosco:active {
+    background-color: #7a1919;
+    transform: translateY(1px); /* Move o botão levemente para baixo para dar feedback de clique */
+}
 
 /* ---------------------------------- */
 /* ----------- POPUP MODAL ---------- */
