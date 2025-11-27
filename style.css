@@ -330,7 +330,7 @@ hr {
 
 /* Efeito ao clicar (Estado ativo) */
 #botao-fale-conosco:active {
-    background-color: #7a1919;
+    background-color: #d0f118;
     transform: translateY(1px); /* Move o botão levemente para baixo para dar feedback de clique */
 }
 
